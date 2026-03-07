@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 .inicio-hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
+  min-height: 620px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-fondo {
@@ -17,15 +22,28 @@
 .hero-overlay {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.62);
   color: white;
   text-align: center;
-  padding: 3rem 2rem;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 3rem 2.5rem;
+  border-radius: 14px;
+  max-width: 620px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.hero-overlay h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
 }
 
 .btn-turnos {
@@ -33,14 +51,15 @@
   background-color: white;
   color: black;
   text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-turnos:hover {
   background-color: #ddd;
+  transform: translateY(-1px);
 }
 
 .seccion-bienvenida {
@@ -57,7 +76,7 @@
 .seccion-bienvenida img {
   width: 320px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .texto-bienvenida {
@@ -86,8 +105,17 @@
   background-color: #25D366;
   border-radius: 50%;
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   animation: pulse 2.5s infinite;
+}
+
+.btn-wpp-flotante img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-wpp-flotante:hover {
+  transform: scale(1.08);
 }
 
 .galeria {
@@ -121,15 +149,6 @@
   transform: scale(1.05);
 }
 
-.btn-wpp-flotante img {
-  width: 50px;
-  height: 50px;
-}
-
-.btn-wpp-flotante:hover {
-  transform: scale(1.1);
-}
-
 /* Animación pulse */
 @keyframes pulse {
   0% {
@@ -146,7 +165,19 @@
   }
 }
 
-/* TAMAÑO Y RECORTE DE LA FOTO DEL ODONTÓLOGO */
+/* EQUIPO */
+.seccion-equipo {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px 20px 60px;
+}
+
+.odontologo {
+  text-align: center;
+}
+
 .odontologo img {
   width: 280px;
   height: 320px;
@@ -154,15 +185,120 @@
   border-radius: 12px;
 }
 
-/* TAMAÑO Y RECORTE DE LA FOTO DEL ODONTÓLOGO */
-.seccion-equipo {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+.odontologo h3 {
+  margin-top: 14px;
+  font-size: 1.5rem;
 }
 
-.odontologo {
-  text-align: center;
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 992px) {
+  .inicio-hero {
+    height: 80vh;
+    min-height: 560px;
+  }
+
+  .hero-overlay {
+    max-width: 560px;
+    padding: 2.4rem 2rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+  .inicio-hero {
+    height: 100vh;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-overlay {
+    width: 86%;
+    max-width: 360px;
+    padding: 2rem 1.4rem;
+    border-radius: 16px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn-turnos {
+    padding: 0.75rem 1.3rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .seccion-equipo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    padding: 30px 16px 50px;
+  }
+
+  .odontologo img {
+    width: 240px;
+    height: 280px;
+  }
+
+  .odontologo h3 {
+    font-size: 1.2rem;
+    margin-top: 12px;
+  }
+
+  .btn-wpp-flotante {
+    bottom: 14px;
+    right: 14px;
+    padding: 8px;
+  }
+
+  .btn-wpp-flotante img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ========================= */
+/* MOBILE CHICO */
+/* ========================= */
+@media (max-width: 420px) {
+  .inicio-hero {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .hero-overlay {
+    width: 84%;
+    max-width: 330px;
+    padding: 1.7rem 1.1rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.95rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.92rem;
+  }
+
+  .btn-turnos {
+    font-size: 0.9rem;
+    padding: 0.72rem 1.15rem;
+  }
 }
