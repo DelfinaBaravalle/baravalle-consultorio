@@ -222,8 +222,8 @@
     padding: 0 16px;
   }
 
-  .hero-overlay {
-  width: 88%;
+.hero-overlay {
+  width: calc(100% - 40px);
   max-width: 320px;
   margin: 0 auto;
   padding: 1.9rem 1.2rem;
