@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 .inicio-hero {
   position: relative;
@@ -8,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 18px;   /* 👈 ESTO CREA MARGEN LATERAL EN MOBILE */
+  padding: 0 18px;
 }
 
 .video-fondo {
@@ -30,7 +31,7 @@
   padding: 3rem 2.5rem;
   border-radius: 14px;
   max-width: 620px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
@@ -224,17 +225,14 @@
     padding: 0 16px;
   }
 
-.hero-overlay {
-  width: calc(100% - 40px);
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 1.9rem 1.2rem;
-  border-radius: 18px;
-}
-
-.hero-overlay {
-  backdrop-filter: blur(6px);
-}
+  .hero-overlay {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1.9rem 1.2rem;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+  }
 
   .hero-overlay h1 {
     font-size: 2rem;
@@ -294,7 +292,8 @@
   }
 
   .hero-overlay {
-    max-width: 320px;
+    width: 100%;
+    max-width: 300px;
     padding: 1.6rem 1rem;
   }
 
