@@ -26,7 +26,7 @@
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.62);
-  color: white;
+  color: #cccccc;
   text-align: center;
   padding: 3rem 2.5rem;
   border-radius: 14px;
