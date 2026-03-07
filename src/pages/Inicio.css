@@ -1,0 +1,168 @@
+.inicio-hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-turnos {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-turnos:hover {
+  background-color: #ddd;
+}
+
+.seccion-bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #e5e5e5;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.seccion-bienvenida img {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.texto-bienvenida {
+  max-width: 500px;
+}
+
+.texto-bienvenida h2 {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.texto-bienvenida p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Botón flotante de WhatsApp */
+.btn-wpp-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: pulse 2.5s infinite;
+}
+
+.galeria {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.galeria h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+.btn-wpp-flotante img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-wpp-flotante:hover {
+  transform: scale(1.1);
+}
+
+/* Animación pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* TAMAÑO Y RECORTE DE LA FOTO DEL ODONTÓLOGO */
+.odontologo img {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TAMAÑO Y RECORTE DE LA FOTO DEL ODONTÓLOGO */
+.seccion-equipo {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.odontologo {
+  text-align: center;
+}
