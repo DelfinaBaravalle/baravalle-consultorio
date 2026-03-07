@@ -223,11 +223,16 @@
   }
 
   .hero-overlay {
-    width: 100%;
-    max-width: 340px;
-    padding: 1.8rem 1.2rem;
-    border-radius: 18px;
-  }
+  width: 88%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 1.9rem 1.2rem;
+  border-radius: 18px;
+}
+
+.hero-overlay {
+  backdrop-filter: blur(6px);
+}
 
   .hero-overlay h1 {
     font-size: 2rem;
