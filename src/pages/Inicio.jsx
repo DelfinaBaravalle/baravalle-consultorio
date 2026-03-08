@@ -3,6 +3,7 @@ import videoFondo from '../assets/videos/fondo-video.mp4';
 import whatsappIcon from '../assets/images/whatsapp-icon.png';
 import mauro from '../assets/images/mauro.jpeg';
 import salaespera from '../assets/images/salaespera.jpeg';
+import camila from '../assets/images/camila.jpeg';
 
 export default function Inicio() {
   return (
@@ -33,6 +34,11 @@ export default function Inicio() {
         <div className="odontologo">
           <img src={mauro} alt="Od. Mauro Luis Baravalle" />
           <h3>Od. Mauro Luis Baravalle</h3>
+        </div>
+
+        <div className="odontologo">
+          <img src={camila} alt="Od. Camila Baravalle" />
+          <h3>Od. Camila Baravalle</h3>
         </div>
 
         <div className="odontologo">
