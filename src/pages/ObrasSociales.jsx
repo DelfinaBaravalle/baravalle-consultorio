@@ -82,6 +82,11 @@ const obras = [
     logo: require('../assets/obras/apross.jpg'),
     link: 'https://www.apross.gov.ar/',
   },
+  {
+    nombre: 'MET',
+    logo: require('../assets/obras/met.jpeg'),
+    link: 'http://metmedicinaprivada.com/',
+  },
 ];
 
 export default function ObrasSociales() {

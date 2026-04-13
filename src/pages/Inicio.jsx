@@ -48,7 +48,7 @@ export default function Inicio() {
       </section>
 
       <a
-        href="https://wa.me/3512680012"
+        href="https://wa.me/3512680012?text=Hola%21%20Me%20gustar%C3%ADa%20agendar%20un%20turno%20en%20Baravalle%20Consultorios%20Odontol%C3%B3gicos"
         className="btn-wpp-flotante"
         target="_blank"
         rel="noopener noreferrer"
