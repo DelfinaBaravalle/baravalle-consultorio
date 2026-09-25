@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Encabezado />
 
-      <main className="main-content">
+      <main id="contenido" className="main-content" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/especialidades" element={<Especialidades />} />

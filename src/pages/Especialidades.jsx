@@ -1,3 +1,4 @@
+import { enlaceTurnos, enlaceWhatsApp } from '../config/contacto';
 // src/pages/Especialidades.jsx
 import './Especialidades.css';
 
@@ -39,37 +40,37 @@ const especialidades = [
 export default function Especialidades() {
   return (
     <div className="especialidades-page">
-
-      <h1>Especialidades</h1>
+      <header className="especialidades-intro">
+        <p className="especialidades-etiqueta">CUIDADO INTEGRAL</p>
+        <h1>Especialidades</h1>
+        <p>Distintos tratamientos, una misma dedicación: cuidar tu salud bucal con atención personalizada.</p>
+      </header>
 
       <div className="especialidades-grid">
         {especialidades.map((item, index) => (
-          <div className="especialidad-card" key={index}>
-            <div className="especialidad-card-inner">
-              <div className="especialidad-front">
-                <p>{item.nombre}</p>
-              </div>
-              <div className="especialidad-back">
-                <p>{item.descripcion}</p>
-              </div>
-            </div>
-          </div>
+          <article className="especialidad-card" key={item.nombre}>
+            <span className="especialidad-numero" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h2>{item.nombre}</h2>
+            <p>{item.descripcion}</p>
+            <a
+              href={enlaceWhatsApp(`Hola, quisiera consultar por ${item.nombre.toLowerCase()}.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Consultar por ${item.nombre.toLowerCase()}`}
+            >
+              Consultar por este tratamiento <span aria-hidden="true">↗</span>
+            </a>
+          </article>
         ))}
       </div>
 
-      {/* TEXTO ABAJO COMO SECCIÓN */}
-      <section className="seccion-bienvenida">
-        <div className="texto-bienvenida">
-          <h2>Tu sonrisa, en manos de expertos</h2>
-          <p>
-            En Consultorios Baravalle contamos con un equipo de profesionales
-            comprometidos con tu bienestar bucal. Brindamos tratamientos
-            personalizados y tecnología de última generación para que cada
-            visita sea una experiencia confortable y efectiva.
-          </p>
+      <section className="especialidades-orientacion" aria-labelledby="orientacion-titulo">
+        <div>
+          <h2 id="orientacion-titulo">¿No sabés por dónde empezar?</h2>
+          <p>Coordiná una primera consulta para que podamos evaluar tu caso y orientarte.</p>
         </div>
+        <a href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno <span aria-hidden="true">↗</span></a>
       </section>
-
     </div>
   );
 }

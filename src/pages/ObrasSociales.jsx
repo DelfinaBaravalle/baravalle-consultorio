@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { enlaceWhatsApp } from '../config/contacto';
 // src/pages/ObrasSociales.jsx
 import './ObrasSociales.css';
 
@@ -89,35 +91,50 @@ const obras = [
   },
 ];
 
+function normalizar(texto) {
+  return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
 export default function ObrasSociales() {
+  const [busqueda, setBusqueda] = useState('');
+  const filtradas = obras.filter((obra) => normalizar(obra.nombre).includes(normalizar(busqueda)));
+
   return (
     <div className="obras-page">
-      <h1>Obras Sociales</h1>
-      <div className="grilla-obras">
-        {obras.map((obra, index) => (
-          <a
-            href={obra.link}
-            key={index}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="logo-obra"
-          >
-            <img src={obra.logo} alt={obra.nombre} />
-          </a>
-        ))}
+      <header className="obras-intro">
+        <p className="obras-etiqueta">TU COBERTURA</p>
+        <h1>Obras sociales</h1>
+        <p>Encontrá tu obra social y escribinos para consultar la cobertura de tu plan.</p>
+      </header>
+
+      <div className="obras-buscador">
+        <label htmlFor="buscar-obra">Buscá tu obra social</label>
+        <div className="obras-buscador-campo">
+          <input id="buscar-obra" type="search" value={busqueda} onChange={(event) => setBusqueda(event.target.value)} placeholder="Por ejemplo: OSDE, Galeno o Swiss Medical" aria-describedby="obras-resultados" />
+          {busqueda && <button type="button" onClick={() => setBusqueda('')}>Limpiar</button>}
+        </div>
+        <p id="obras-resultados" role="status" aria-live="polite">{filtradas.length === 1 ? '1 obra social encontrada' : `${filtradas.length} obras sociales encontradas`}</p>
       </div>
 
-      {/* Botón de WhatsApp */}
-      <div className="obras-footer">
-        <a
-          href="https://wa.me/5493512177711?text=Hola%21%20Quer%C3%ADa%20consultar%20si%20atienden%20por%20la%20obra%20social%20...."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-wpp"
-        >
-          Consultar por más obras sociales
-        </a>
-      </div>
+      {filtradas.length > 0 ? (
+        <div className="grilla-obras">
+          {filtradas.map((obra) => (
+            <article className="obra-card" key={obra.nombre}>
+              <div className="obra-logo"><img src={obra.logo} alt="" loading="lazy" width="160" height="90" /></div>
+              <h2>{obra.nombre}</h2>
+              <a className="obra-consulta" href={enlaceWhatsApp(`Hola, tengo ${obra.nombre} y quisiera consultar la cobertura de mi plan.`)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar cobertura de ${obra.nombre}`}>Consultar cobertura <span aria-hidden="true">↗</span></a>
+              <a className="obra-sitio" href={obra.link} target="_blank" rel="noopener noreferrer" aria-label={`Sitio web de ${obra.nombre}`}>Sitio de la obra social <span aria-hidden="true">↗</span></a>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="obras-sin-resultados"><h2>No encontramos esa obra social en la lista.</h2><p>Podés probar con otro nombre o escribirnos para consultar.</p></div>
+      )}
+
+      <section className="obras-ayuda" aria-labelledby="obras-ayuda-titulo">
+        <div><h2 id="obras-ayuda-titulo">¿No encontrás tu obra social?</h2><p>Escribinos con el nombre de tu obra social y tu plan para consultar.</p></div>
+        <a href={enlaceWhatsApp(busqueda.trim() ? `Hola, quisiera consultar si atienden por ${busqueda.trim()} y la cobertura de mi plan.` : 'Hola, quisiera consultar si atienden por mi obra social y plan.')} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <span aria-hidden="true">↗</span></a>
+      </section>
     </div>
   );
 }
