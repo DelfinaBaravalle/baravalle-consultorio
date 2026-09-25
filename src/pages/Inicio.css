@@ -58,3 +58,26 @@
   .inicio-cobertura { flex-direction: column; align-items: flex-start; padding: 40px 20px; }
   .inicio-cierre { padding: 52px 20px; }
 }
+
+@media (min-width: 601px) and (max-width: 850px) {
+  .inicio-tratamientos-grid { grid-template-columns: 1fr; }
+  .inicio-cobertura { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .inicio-hero { padding: 36px 20px 32px; text-align: left; }
+  .hero-texto h1 { font-size: clamp(2rem, 8.4vw, 3rem); margin-bottom: 20px; }
+  .hero-texto h1 br { display: none; }
+  .hero-descripcion { font-size: 1rem; line-height: 1.65; }
+  .inicio .inicio-etiqueta { font-size: .7rem; line-height: 1.6; letter-spacing: .12em; margin-bottom: 16px; }
+  .inicio-acciones { flex-direction: column; align-items: stretch; gap: 8px; margin-top: 24px; }
+  .inicio-acciones .inicio-enlace { justify-content: center; }
+  .inicio-boton { width: 100%; font-size: .95rem; text-align: center; gap: 12px; }
+  .inicio-enlace { font-size: .95rem; }
+  .hero-direccion { font-size: .8rem; margin-top: 20px; }
+  .inicio h2 { font-size: clamp(1.65rem, 7vw, 2rem); }
+  .inicio-profesionales { grid-template-columns: 1fr; gap: 28px; }
+  .inicio-profesional img { aspect-ratio: 4 / 4; object-position: center 25%; }
+  .inicio-profesional h3 { font-size: 1.2rem; }
+  .inicio-profesional p { font-size: .9rem; }
+  .inicio-tratamiento p, .equipo-presentacion > p:not(.inicio-etiqueta) { font-size: 1rem; }
+}

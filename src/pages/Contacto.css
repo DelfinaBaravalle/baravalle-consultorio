@@ -122,3 +122,17 @@
   .contacto-mapa { min-height: 300px; height: 300px; }
   .contacto-boton { width: 100%; }
 }
+
+@media (max-width: 600px) {
+  .contacto-page { padding: 28px 16px 36px; }
+  .contacto-intro h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .contacto-intro > p:last-child { font-size: 1rem; }
+  .contacto-grid { gap: 20px; }
+  .contacto-datos, .contacto-visita { padding: 22px 20px; }
+  .contacto-boton { gap: 10px; padding: 14px 12px; font-size: .9rem; text-align: center; }
+  .contacto-dato a, .contacto-dato address { font-size: 1rem; }
+  .contacto-mapa-cabecera { padding: 20px; }
+  .contacto-mapa-pie { padding: 12px 20px; }
+  .contacto-mapa-pie a { font-size: 1rem; }
+  .contacto-visita { margin-top: 28px; }
+}

@@ -20,3 +20,13 @@
   .nav-links a { padding: 13px 8px; }
   .nav-links .nav-turno { margin-top: 8px; text-align: center; }
 }
+
+@media (max-width: 850px) {
+  .header-fijo { max-height: 100dvh; overflow-y: auto; }
+  .nav-links a { min-height: 48px; font-size: 1rem; }
+}
+@media (max-width: 600px) {
+  .nav-bar { min-height: 68px; padding: 8px 16px; }
+  .logoBaravalle { height: 48px; }
+  .menu-toggle { font-size: .95rem; }
+}

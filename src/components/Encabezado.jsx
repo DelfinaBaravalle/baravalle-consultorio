@@ -9,7 +9,10 @@ export default function Encabezado() {
   const boton = useRef(null);
   const { pathname } = useLocation();
 
-  useEffect(() => { setAbierto(false); }, [pathname]);
+  useEffect(() => {
+    setAbierto(false);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   function cerrarConEscape(event) {
     if (event.key === 'Escape' && abierto) {

@@ -3,7 +3,7 @@
 :root { --gris-perla: #f4f4f4; --gris-nav: #d6d6d6; --texto-oscuro: #222; --fuente: 'Inter', sans-serif; }
 * { box-sizing: border-box; }
 html, body, #root { margin: 0; min-height: 100%; }
-html { scroll-padding-top: 110px; }
+html { scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { font-family: var(--fuente); color: var(--texto-oscuro); background: #ccc; }
 img { max-width: 100%; display: block; }
 .main-content { min-height: calc(100vh - 180px); }
@@ -11,4 +11,10 @@ img { max-width: 100%; display: block; }
 footer { text-align: center; padding: 28px 20px; font-size: .7rem; letter-spacing: .08em; color: #444; border-top: 1px solid #bbb; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Let long text wrap inside narrow grid and flex columns. */
+h1, h2, h3, p, a { overflow-wrap: break-word; }
+@media (max-width: 600px) {
+  footer { padding: 22px 16px; line-height: 1.8; }
 }

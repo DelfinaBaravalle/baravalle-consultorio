@@ -110,7 +110,7 @@ export default function ObrasSociales() {
       <div className="obras-buscador">
         <label htmlFor="buscar-obra">Buscá tu obra social</label>
         <div className="obras-buscador-campo">
-          <input id="buscar-obra" type="search" value={busqueda} onChange={(event) => setBusqueda(event.target.value)} placeholder="Por ejemplo: OSDE, Galeno o Swiss Medical" aria-describedby="obras-resultados" />
+          <input id="buscar-obra" type="search" value={busqueda} onChange={(event) => setBusqueda(event.target.value)} placeholder="Nombre de tu obra social" aria-describedby="obras-resultados" />
           {busqueda && <button type="button" onClick={() => setBusqueda('')}>Limpiar</button>}
         </div>
         <p id="obras-resultados" role="status" aria-live="polite">{filtradas.length === 1 ? '1 obra social encontrada' : `${filtradas.length} obras sociales encontradas`}</p>

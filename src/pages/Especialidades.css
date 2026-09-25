@@ -29,3 +29,20 @@
   .especialidad-card { padding: 24px; }
   .especialidades-orientacion { flex-direction: column; align-items: flex-start; padding: 28px 24px; gap: 24px; }
 }
+
+@media (max-width: 850px) {
+  .especialidades-orientacion { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .especialidades-page { padding: 28px 16px 36px; }
+  .especialidades-intro { margin-bottom: 24px; }
+  .especialidades-intro h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); margin-bottom: 14px; }
+  .especialidades-etiqueta { margin-bottom: 12px; }
+  .especialidad-card { min-width: 0; padding: 20px; }
+  .especialidad-card h2 { margin-top: 16px; }
+  .especialidad-card p { font-size: 1rem; line-height: 1.65; margin-bottom: 14px; }
+  .especialidad-card a { font-size: .9rem; }
+  .especialidades-orientacion { padding: 24px 20px; margin-top: 28px; }
+  .especialidades-orientacion h2 { font-size: 1.6rem; }
+  .especialidades-orientacion a { width: 100%; gap: 12px; font-size: .95rem; }
+}

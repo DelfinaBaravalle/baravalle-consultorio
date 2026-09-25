@@ -43,3 +43,21 @@
   .obras-buscador input { font-size: 1rem; }
 }
 @media (max-width: 380px) { .grilla-obras { grid-template-columns: 1fr; } }
+
+@media (max-width: 600px) {
+  .obras-page { padding: 28px 16px 36px; }
+  .obras-intro h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); margin-bottom: 14px; }
+  .obras-etiqueta { margin-bottom: 12px; }
+  .obras-buscador { margin: 24px 0; }
+  .obras-buscador-campo { flex-wrap: wrap; gap: 4px; }
+  .obras-buscador input { flex: 1 1 100%; }
+  .grilla-obras { grid-template-columns: 1fr; }
+  .obra-card { display: grid; grid-template-columns: 88px minmax(0, 1fr); column-gap: 16px; padding: 16px; align-items: center; }
+  .obra-logo { grid-row: 1 / 4; height: 88px; padding: 8px; }
+  .obra-logo img { height: 72px; }
+  .obra-card h2 { margin: 0 0 4px; font-size: .95rem; }
+  .obra-consulta, .obra-sitio { font-size: .85rem; margin: 0; }
+  .obras-ayuda { padding: 24px 20px; margin-top: 28px; }
+  .obras-ayuda h2 { font-size: 1.6rem; }
+  .obras-ayuda > a { width: 100%; flex-shrink: 1; gap: 10px; text-align: center; }
+}
