@@ -1,3 +1,4 @@
+import FlechaExterna from './FlechaExterna';
 import { enlaceTurnos } from '../config/contacto';
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
@@ -35,7 +36,7 @@ export default function Encabezado() {
           {[['/', 'Inicio'], ['/especialidades', 'Especialidades'], ['/obras-sociales', 'Obras sociales'], ['/contacto', 'Contacto']].map(([ruta, texto]) => (
             <NavLink key={ruta} to={ruta} end={ruta === '/'} onClick={() => setAbierto(false)} className={({ isActive }) => isActive ? 'activo' : ''}>{texto}</NavLink>
           ))}
-          <a className="nav-turno" href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno <span aria-hidden="true">↗</span></a>
+          <a className="nav-turno" href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno <FlechaExterna /></a>
         </div>
       </nav>
     </header>

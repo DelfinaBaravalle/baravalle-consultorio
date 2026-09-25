@@ -1,3 +1,4 @@
+import FlechaExterna from '../components/FlechaExterna';
 import { enlaceTurnos } from '../config/contacto';
 import './Contacto.css';
 
@@ -14,14 +15,14 @@ export default function Contacto() {
       <div className="contacto-grid">
         <section className="contacto-datos" aria-labelledby="contacto-datos-titulo">
           <h2 id="contacto-datos-titulo">Hablemos de tu sonrisa.</h2>
-          <a className="contacto-boton" href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno por WhatsApp <span aria-hidden="true">↗</span></a>
+          <a className="contacto-boton" href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno por WhatsApp <FlechaExterna /></a>
           <div className="contacto-dato">
             <h3>CONSULTORIO</h3>
             <address>Gregorio Y. Gavier 1854<br />Planta Baja B · Córdoba Capital</address>
           </div>
           <div className="contacto-dato">
             <h3>INSTAGRAM</h3>
-            <a href="https://www.instagram.com/baravalleconsultorio/" target="_blank" rel="noopener noreferrer">@baravalleconsultorio <span aria-hidden="true">↗</span></a>
+            <a href="https://www.instagram.com/baravalleconsultorio/" target="_blank" rel="noopener noreferrer">@baravalleconsultorio <FlechaExterna /></a>
           </div>
         </section>
 
@@ -34,7 +35,7 @@ export default function Contacto() {
             title="Mapa de ubicación de Baravalle Consultorios Odontológicos"
             allowFullScreen
           />
-          <div className="contacto-mapa-pie"><p>Gregorio Y. Gavier 1854 · Planta Baja B</p><a href={ubicacion} target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a></div>
+          <div className="contacto-mapa-pie"><p>Gregorio Y. Gavier 1854 · Planta Baja B</p><a href={ubicacion} target="_blank" rel="noopener noreferrer">Cómo llegar <FlechaExterna /></a></div>
         </section>
       </div>
 

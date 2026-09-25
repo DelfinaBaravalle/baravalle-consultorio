@@ -1,3 +1,4 @@
+import FlechaExterna from '../components/FlechaExterna';
 import { useState } from 'react';
 import { enlaceWhatsApp } from '../config/contacto';
 // src/pages/ObrasSociales.jsx
@@ -122,8 +123,8 @@ export default function ObrasSociales() {
             <article className="obra-card" key={obra.nombre}>
               <div className="obra-logo"><img src={obra.logo} alt="" loading="lazy" width="160" height="90" /></div>
               <h2>{obra.nombre}</h2>
-              <a className="obra-consulta" href={enlaceWhatsApp(`Hola, tengo ${obra.nombre} y quisiera consultar la cobertura de mi plan.`)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar cobertura de ${obra.nombre}`}>Consultar cobertura <span aria-hidden="true">↗</span></a>
-              <a className="obra-sitio" href={obra.link} target="_blank" rel="noopener noreferrer" aria-label={`Sitio web de ${obra.nombre}`}>Sitio de la obra social <span aria-hidden="true">↗</span></a>
+              <a className="obra-consulta" href={enlaceWhatsApp(`Hola, tengo ${obra.nombre} y quisiera consultar la cobertura de mi plan.`)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar cobertura de ${obra.nombre}`}>Consultar cobertura <FlechaExterna /></a>
+              <a className="obra-sitio" href={obra.link} target="_blank" rel="noopener noreferrer" aria-label={`Sitio web de ${obra.nombre}`}>Sitio de la obra social <FlechaExterna /></a>
             </article>
           ))}
         </div>
@@ -133,7 +134,7 @@ export default function ObrasSociales() {
 
       <section className="obras-ayuda" aria-labelledby="obras-ayuda-titulo">
         <div><h2 id="obras-ayuda-titulo">¿No encontrás tu obra social?</h2><p>Escribinos con el nombre de tu obra social y tu plan para consultar.</p></div>
-        <a href={enlaceWhatsApp(busqueda.trim() ? `Hola, quisiera consultar si atienden por ${busqueda.trim()} y la cobertura de mi plan.` : 'Hola, quisiera consultar si atienden por mi obra social y plan.')} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <span aria-hidden="true">↗</span></a>
+        <a href={enlaceWhatsApp(busqueda.trim() ? `Hola, quisiera consultar si atienden por ${busqueda.trim()} y la cobertura de mi plan.` : 'Hola, quisiera consultar si atienden por mi obra social y plan.')} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <FlechaExterna /></a>
       </section>
     </div>
   );

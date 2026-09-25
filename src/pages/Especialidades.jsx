@@ -1,3 +1,4 @@
+import FlechaExterna from '../components/FlechaExterna';
 import { enlaceTurnos, enlaceWhatsApp } from '../config/contacto';
 // src/pages/Especialidades.jsx
 import './Especialidades.css';
@@ -58,7 +59,7 @@ export default function Especialidades() {
               rel="noopener noreferrer"
               aria-label={`Consultar por ${item.nombre.toLowerCase()}`}
             >
-              Consultar por este tratamiento <span aria-hidden="true">↗</span>
+              Consultar por este tratamiento <FlechaExterna />
             </a>
           </article>
         ))}
@@ -69,7 +70,7 @@ export default function Especialidades() {
           <h2 id="orientacion-titulo">¿No sabés por dónde empezar?</h2>
           <p>Coordiná una primera consulta para que podamos evaluar tu caso y orientarte.</p>
         </div>
-        <a href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno <span aria-hidden="true">↗</span></a>
+        <a href={enlaceTurnos} target="_blank" rel="noopener noreferrer">Solicitar turno <FlechaExterna /></a>
       </section>
     </div>
   );
