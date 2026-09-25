@@ -1,3 +1,4 @@
+:root { --altura-encabezado: 93px; }
 .header-fijo { position: sticky; top: 0; z-index: 1000; background: #e3e3e3; border-bottom: 1px solid #c5c5c5; }
 .nav-bar { max-width: 1240px; margin: auto; min-height: 92px; padding: 12px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo-titulo { flex-shrink: 0; }
@@ -11,6 +12,7 @@
 .saltar-contenido { position: absolute; left: 16px; top: -100px; padding: 12px; background: white; color: #222; }
 .saltar-contenido:focus { top: 12px; z-index: 2; }
 @media (max-width: 850px) {
+  :root { --altura-encabezado: 77px; }
   .nav-bar { min-height: 76px; padding: 10px 20px; flex-wrap: wrap; gap: 0; }
   .logoBaravalle { height: 54px; }
   .menu-toggle { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 12px; font: inherit; font-size: .85rem; background: transparent; border: 1px solid #aaa; border-radius: 6px; color: #222; cursor: pointer; }
@@ -26,6 +28,7 @@
   .nav-links a { min-height: 48px; font-size: 1rem; }
 }
 @media (max-width: 600px) {
+  :root { --altura-encabezado: 69px; }
   .nav-bar { min-height: 68px; padding: 8px 16px; }
   .logoBaravalle { height: 48px; }
   .menu-toggle { font-size: .95rem; }
